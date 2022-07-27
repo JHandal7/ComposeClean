@@ -1,0 +1,33 @@
+buildscript {
+    ext {
+        compose_version = '1.1.1'
+    }
+    ext.kotlin_version = "1.6.21"
+    ext.hilt_version = '2.42'
+    ext.hilt_jetpack = '1.0.0-alpha02'
+    ext.retrofit_version = '2.9.0'
+    ext.lifecycle_version = '2.2.0'
+    ext.coroutines_version = '1.3.3'
+}
+
+
+plugins {
+//   id 'com.android.tools.build.gradle' version '7.2.1'
+
+ // ojo   id 'com.android.application' version '7.2.1' apply false
+  // ojo  id 'com.android.library' version '7.2.1' apply false
+  // ojo  id 'org.jetbrains.kotlin.android' version '1.6.10' apply false
+    //id 'com.google.dagger.hilt.android.gradle.plugin' version '2.38.1' apply false
+//    id 'dagger.hilt.android.plugin'
+    id 'com.google.dagger.hilt.android' version '2.42'  apply false
+
+//id 'com.android.tools.build.gradle' version '7.0.0' apply false
+  // id 'com.android.tools.build.gradle' version '4.2.2'
+    id("com.android.application") version "7.2.0" apply false
+    id("com.android.library") version "7.2.0" apply false
+    id("org.jetbrains.kotlin.android") version "1.5.31" apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
